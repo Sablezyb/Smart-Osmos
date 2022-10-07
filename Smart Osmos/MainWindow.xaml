@@ -15,9 +15,10 @@
             <ColumnDefinition Width="0.15*"/>
             <ColumnDefinition/>
         </Grid.ColumnDefinitions>
-        
+
         <StackPanel Grid.Column="0"
-                    Orientation="Vertical">
+                    Orientation="Vertical"
+                    VerticalAlignment="Top">
 
             <Button Height="22" 
                     Margin="2.5" 
@@ -27,14 +28,34 @@
                     Margin="2.5" 
                     Content="Журнал Событий"
                     />
-            
+
         </StackPanel>
-        
-        <Button Grid.Column="0" 
-                Height="22" 
-                VerticalAlignment="Bottom"
-                Content="Выход"
+
+        <StackPanel Orientation="Vertical"
+                    Grid.Column="0"
+                    VerticalAlignment="Bottom"
+                    >
+            <Button x:Name="btn_Settings"
+                    Height="22"
+                    Margin="2.5"
+                    >
+                <StackPanel Orientation="Horizontal"
+                            >
+                    <TextBlock>Настройки </TextBlock>
+                </StackPanel>
+            </Button>
+            
+            <Button x:Name="btn_Close"
+                Height="22"
                 Margin="2.5"
-                />
+                Click="btn_Close_Click"
+                >
+                <StackPanel Orientation="Horizontal"
+                            >
+                    <Image Source="/Idle (4).png" Stretch="Fill"/>
+                    <TextBlock>Выход</TextBlock>
+                </StackPanel>
+            </Button>
+        </StackPanel>
     </Grid>
 </Window>
